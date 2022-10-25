@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        //git 'https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git'
         bat "git clone https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git"
       }
     }
@@ -30,7 +29,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build(registry + ":$BUILD_NUMBER")
         }
       }
     }
