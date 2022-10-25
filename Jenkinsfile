@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        bat "rm -rf hello-world-devops-assignment-2022"
+        sh "rm -rf hello-world-devops-assignment-2022"
         bat "git clone https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git"
       }
     }
