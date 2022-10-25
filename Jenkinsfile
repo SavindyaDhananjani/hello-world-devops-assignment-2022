@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        git 'https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git'
+        //git 'https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git'
+        bat "git clone https://github.com/SavindyaDhananjani/hello-world-devops-assignment-2022.git"
       }
     }
     stage('Clean') {
